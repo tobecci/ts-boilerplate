@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:ts": "npx tsc --watch",
-    "start:js": "npx nodemon ./dist/index.js",
-    "start:dev": "npx tsc && npx concurrently \"npm run start:ts\" \"npm run start:js\"",
-    "start": "npx tsc && node ./dist/index.js"
+    "start:ts": "tsc --watch",
+    "start:js": "nodemon ./dist/index.js",
+    "start:dev": "tsc && concurrently \"npm run start:ts\" \"npm run start:js\"",
+    "start": "tsc && node ./dist/index.js",
+    "start:test": "nodemon dist/index.js"
   },
   "repository": {
     "type": "git",
